@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build & Deploy to GitHub Pages",
+      "type": "shell",
+      "command": "npm run build && npm run deploy",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Build only",
+      "type": "shell",
+      "command": "npm run build",
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Run locally (dev server)",
+      "type": "shell",
+      "command": "npm run dev",
+      "group": "none",
+      "problemMatcher": []
+    }
+  ]
+}
